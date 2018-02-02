@@ -244,9 +244,10 @@ public class PlayerController implements Initializable {
         }
     }
     
+    //handle slider drag to set mediaPlayer current time to slider position. Also handles clicking slider 
     @FXML
-    private void handleDrag(MouseEvent event){
-        System.out.println("TEST");
+    private void handleSliderDragOrClick(MouseEvent event){
+        mediaPlayer.seek(Duration.millis(timeSlider.getValue()));
     }
     
 }
